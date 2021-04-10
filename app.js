@@ -37,7 +37,7 @@ class Products {
         const image = item.fields.image.fields.file.url;
         return { title, price, id, image };
       });
-      console.log(products);
+      // console.log(products);
 
       return products;
     } catch (error) {
@@ -52,7 +52,7 @@ class UI {
     let result = "";
     products.forEach(product => {
       result += `
-   <!-- single product -->
+      <!-- single product -->
         <article class="product">
           <div class="img-container">
             <img
@@ -66,9 +66,9 @@ class UI {
             </button>
           </div>
           <h3>${product.title}</h3>
-          <h4>$${product.price}</h4>
+          <h4>Rs ${product.price}</h4>
         </article>
-        <!-- end of single product -->
+    <!-- end of single product -->
    `;
     });
     productsDOM.innerHTML = result;
@@ -119,7 +119,7 @@ class UI {
             <!-- item info -->
             <div>
               <h4>${item.title}</h4>
-              <h5>$${item.price}</h5>
+              <h5>Rs ${item.price}</h5>
               <span class="remove-item" data-id=${item.id}>remove</span>
             </div>
             <!-- item functionality -->
