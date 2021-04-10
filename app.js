@@ -52,7 +52,7 @@ class UI {
     let result = "";
     products.forEach(product => {
       result += `
-      <!-- single product -->
+      
         <article class="product">
           <div class="img-container">
             <img
@@ -68,7 +68,7 @@ class UI {
           <h3>${product.title}</h3>
           <h4>Rs ${product.price}</h4>
         </article>
-    <!-- end of single product -->
+    
    `;
     });
     productsDOM.innerHTML = result;
